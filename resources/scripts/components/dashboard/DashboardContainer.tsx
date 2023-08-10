@@ -50,16 +50,16 @@ export default () => {
     }, [error]);
 
     return (
-        <PageContentBlock title={'Dashboard'} css={tw`mt-4 sm:mt-10`} showFlashKey={'dashboard'}>
+        <PageContentBlock title={'ダッシュボード'} css={tw`mt-4 sm:mt-10`} showFlashKey={'dashboard'}>
             <div css={tw`mb-10 flex justify-between items-center`}>
                 {rootAdmin ? (
                     <>
                         <div>
                             <h1 className={'text-5xl'}>
-                                {showOnlyAdmin ? 'Showing other servers' : 'Showing your servers'}
+                                {showOnlyAdmin ? '全体ののサーバー' : '私のサーバー'}
                             </h1>
                             <h3 className={'text-2xl mt-2 text-neutral-500'}>
-                                Select a server to view, update or modify.
+                                表示、更新、修正するサーバーを選択します。
                             </h3>
                         </div>
                         <Switch
@@ -70,9 +70,9 @@ export default () => {
                     </>
                 ) : (
                     <div>
-                        <h1 className={'text-5xl'}>Welcome, {username}!</h1>
+                        <h1 className={'text-5xl'}>ようこそ！, {username}!</h1>
                         <h3 className={'text-2xl mt-2 text-neutral-500'}>
-                            Select a server from the list of your servers below.
+                            以下のサーバーリストからサーバーを選択してください。
                         </h3>
                     </div>
                 )}
@@ -97,7 +97,7 @@ export default () => {
                             </div>
                         ) : (
                             <p className={'text-gray-400 text-lg font-semibold text-center'}>
-                                Doesn&apos;t look like you have any servers here.
+                                ここにはサーバーがありません。
                             </p>
                         )
                     }
